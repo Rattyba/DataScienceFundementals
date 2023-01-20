@@ -9,36 +9,17 @@ st.title ("Data Science Fundementals Project: Movie Recommendation System")
 df = pd.read_csv("Cleaned_Dataset.csv")
 
 #Select Location
-Select = st.radio("Please select", ( "Question 1", "Question 2", "Question 3"))
+Select = st.radio("Please select", ( "Introduction", "Question 2", "Question 3"))
 
 
-if Select == "Question 1":
+if Select == "Introduction":
     # set header
-    st.header('Question 1: Which generation of customer spend the most time in the shop?')
+    st.header('Introduction')
     
     # set subheader
-    st.subheader('Exploratory Data Analysis')
-    st.markdown('First, cut the time spent by the customer into bins of [10,20,30,40,50,60] and plotted a Bar chart for the binned time spent.')
-    image = Image.open('Bar Chart for Binned Time Spent.jpg')
-    st.image(image, caption='Bar Chart for Binned Time Spent')
-    st.markdown('Based on the bar chart above, we can know that the time of most of the customer spent are at the range from 30 minutes to 40 minutes.')
+    st.markdown('In this area of moderation, with the rapid development of technology, there is a big impact on people life, especially the changes of entertainment. Entertainment is  known as one of the parts of human. Different type of entertainment got different generation. Start from 19th century, as the development of movies, there are many types of movies occur in different generation. However, not every movie is recommended to watch, because different people got different preference. In this project, I aim to use a machine learning model which is k-means to categorize each movie based on their publish year. And from here find out which year range has the highest score. K-means is one of the clustering technics which can be categorized the item based on their characteristics.')
     
-    st.markdown('After that, cut the age of the customer into bins of [10,20,30,40,50,60] and plotted a Bar chart to show which age group has the highest total time spent in the laundry shop.')
-    image = Image.open('Total Time Spent by Different Group Age of Customer.jpg')
-    st.image(image, caption='Total Time Spent by Different Group Age of Customer')
-    st.markdown('Based on the Bar chart above, we can see that the customers which are in the age range from 30 to 40 has the hightest time spent in the laundry shop.')
-    
-    # set subheader
-    st.subheader('Clustering Analysis - K-Means')
-    image = Image.open('K-Means(Clustering).jpg')
-    st.image(image, caption='K-Means(Clustering)')
-    st.markdown('Silhouette Score (n=7) =  0.3933169987159571')
-    st.markdown('Silhouette score is a metric used to calculate the goodness of a clustering technique. Its value ranges from -1 to 1.')
-    st.markdown('- 1: clusters are well apart from each other and clearly distinguished.')
-    st.markdown('- 0: clusters are indifferent, or we can say that the distance between clusters is not significant.')
-    st.markdown('- 1: clusters are assigned in the wrong way.')
-    st.markdown('Since the score is 0.3933169987159571 which is below 1 and above 0, therefore we can say that the result is consider ok but not very good.')
-    
+  
 elif Select == "Question 2":
     # set header
     st.header('Question 2: Which generation of customer spend the most time in the shop?')
