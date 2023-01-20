@@ -37,57 +37,13 @@ elif Select == "EDA":
     st.markdown('For the entire project, I will based on the below question to do clustering on each of the movie. ')
     image = Image.open('table.PNG')
     st.image(image, caption='The total score at each range of year of movies')
-    st.markdown('From the table we can found out that the total score from 1990 until 2000 and 2000 until 2010 is 2000. ')
+    st.markdown('From the table we can found out that the total score from 1990 until 2000 and 2000 until 2010 is 2000.')
     
-    st.markdown('Next will be plotting a chart which shows the type of kids that a female customer bring to the laundry shop.')
-    image = Image.open('Kids type that a female customer will bring.jpg')
-    st.image(image, caption='Kids type that a female customer will bring')
+    image = Image.open('barchart.PNG')
+    st.image(image, caption='Bar Chart for different movies total score in each range of year')
+    st.markdown('Based on the bar chart which showed at top, I can found out that the range between 1990 until 2000 and range between 2000 until 2010 have the highest score based on their movies total score. The score of both ranges got is 2000. The columns that I used for this bar chart is year and score. ')
     
-    # set subheader
-    st.subheader('Association Rule Minning')
-    st.markdown('We also used Association Rule Minning to find out the characteristic of customer that will bring kids to the laundry shop.')
-    image = Image.open('Association Rule Minning.jpg')
-    st.image(image, caption='Association Rule Minning')
-
-    # set subheader
-    st.subheader('Feature Selection - Boruta')
-    st.markdown('The first feature selection technique we used is Boruta Feature Selection. The plot below is showing the Boruta Features Score.')
-    image = Image.open('Boruta Features Score.jpg')
-    st.image(image, caption='Boruta Features Score')
-    
-    # set subheader
-    st.subheader('Feature Selection - Information Gain')
-    st.markdown('The second feature selection technique we used is Information Gain Feature Selection. The plot below is showing the Information Gain Features Score.')
-    image = Image.open('Information Gain Features Score.jpg')
-    st.image(image, caption='Information Gain Features Score')
-    
-    # set subheader
-    st.subheader('Classification - SVM')
-    st.markdown('Our first classification model is SVM.')
-    st.markdown('We fit the model with Top 5 & 10 features (Information Gain & Boruta).')
-    image = Image.open('ROC plot for SVM models.jpg')
-    st.image(image, caption='ROC plot for SVM models')
-    
-    # set subheader
-    st.subheader('Classification - KNN')
-    st.markdown('Second classification model will be KNN.')
-    st.markdown('We created the k-NN model with 10 neighbours and also fit the model with Top 5 & 10 features (Information Gain & Boruta).')
-    image = Image.open('ROC plot for KNN models.jpg')
-    st.image(image, caption='ROC plot for KNN models')
-    
-    # set subheader
-    st.subheader('Stacked Ensemble Modeling')
-    st.markdown('- Level-0 = {K-NN, SVM}')
-    st.markdown('- Level-1 = SVM')
-    image = Image.open('Stacked Emsemble model.jpg')
-    st.image(image, caption='Stacked Emsemble model')
-    
-    # set subheader
-    st.subheader('SMOTE')
-    st.markdown('We created a KNN classifier in fit the model to SMOTE dataset & NON-SMOTE dataset in order to see the differences.')
-    st.markdown('We also plotted a ROC chart to compare KNN classifier with and without SMOTE')
-    image = Image.open('ROC plot for KNN with SMOTE and without SMOTE.jpg')
-    st.image(image, caption='ROC plot for KNN with SMOTE and without SMOTE')
+   
     
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
 with open("Report.pdf", "rb") as pdf_file:
