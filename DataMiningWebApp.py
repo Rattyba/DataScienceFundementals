@@ -4,7 +4,7 @@ import time
 import webbrowser
 from PIL import Image
 
-st.title ("Data Mining Project: Self-Service Laundry Shop")
+st.title ("Data Science Fundementals Project: Movie Recommendation System")
 
 df = pd.read_csv("Cleaned_Dataset.csv")
 
