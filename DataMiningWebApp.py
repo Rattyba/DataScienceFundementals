@@ -47,8 +47,8 @@ elif Select == "Label Encoding":
      st.header('Label Encoding')
     
     st.markdown('Before do feature selection, I used label encoding to encode the dataset. The reason that I used Label Encoding instead od using one-hot encoding is because one-hot encoding easily cause the model overfitting. And feature selection model only can read numerical value.  The following is the output of top five rows after done on label encoding. ')
-    image = Image.open('barchart.PNG')
-    st.image(image, caption='Bar Chart for different movies total score in each range of year')
+    image = Image.open('label_encodingt.PNG')
+    st.image(image, caption='Label Encoding visualization')
     
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
 with open("Report.pdf", "rb") as pdf_file:
