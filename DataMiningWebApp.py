@@ -9,7 +9,7 @@ st.title ("Data Science Fundementals Project: Movie Recommendation System")
 df = pd.read_csv("Cleaned_Dataset.csv")
 
 #Select Location
-Select = st.radio("Please select", ( "Introduction", "Data Preprocessing", "EDA","Label Encoding","Feature Selection"))
+Select = st.radio("Please select", ( "Introduction", "Data Preprocessing", "EDA","Label Encoding","Feature Selection","Model Construction and Comparison"))
 
 
 if Select == "Introduction":
@@ -57,6 +57,16 @@ elif Select == "Feature Selection":
     image = Image.open('boruta.PNG')
     st.image(image, caption='Boruta Visualization')
     st.markdown('Based on the diagram, I found out that year, score, votes and released columns are the important features for the clustering model.')
+    
+elif Select == "Model Construction and Comparison":
+    st.header('Model Construction and Comparison')
+    st.subheader('Why is a particular model used?')
+    st.markdown('The reason that using K-means is because K-means can handle large dataset. Other clustering model like Hierarchical Clustering model and Agglomerative Clustering model will occur error when dealing with large dataset.')
+    st.subheader('How to visualize the output of the model?')
+    image = Image.open('boruta.PNG')
+    st.image(image, caption='Boruta Visualization')
+    st.markdown('From the plot shows, we can see that the year range of the movies are separated into 7 different clusters. The distribution of the score is between value 3 until value 9. From this K-means I can find out that the Silhouette score that this K-means model got was 0.5745031689649659. Since the score is 0.5745031689649659which is below 1 and above 0, therefore we can say that the result is considered below average and are able to do better.')
+    
     
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
 with open("Report.pdf", "rb") as pdf_file:
