@@ -44,8 +44,7 @@ elif Select == "EDA":
     st.markdown('Based on the bar chart which showed at top, I can found out that the range between 1990 until 2000 and range between 2000 until 2010 have the highest score based on their movies total score. The score of both ranges got is 2000. The columns that I used for this bar chart is year and score. ')
 
 elif Select == "Label Encoding":
-     st.header('Label Encoding')
-    
+    st.header('Label Encoding')
     st.markdown('Before do feature selection, I used label encoding to encode the dataset. The reason that I used Label Encoding instead od using one-hot encoding is because one-hot encoding easily cause the model overfitting. And feature selection model only can read numerical value.  The following is the output of top five rows after done on label encoding. ')
     image = Image.open('label_encodingt.PNG')
     st.image(image, caption='Label Encoding visualization')
