@@ -35,6 +35,7 @@ elif Select == "EDA":
     st.header('Exploratory Data Analysis')
     
     st.markdown('For the entire project, I will based on the below question to do clustering on each of the movie. ')
+    st.subheader('Which year range of movies have high score?')
     image = Image.open('table.PNG')
     st.image(image, caption='The total score at each range of year of movies')
     st.markdown('From the table we can found out that the total score from 1990 until 2000 and 2000 until 2010 is 2000.')
@@ -46,7 +47,7 @@ elif Select == "EDA":
 elif Select == "Label Encoding":
     st.header('Label Encoding')
     st.markdown('Before do feature selection, I used label encoding to encode the dataset. The reason that I used Label Encoding instead od using one-hot encoding is because one-hot encoding easily cause the model overfitting. And feature selection model only can read numerical value.  The following is the output of top five rows after done on label encoding. ')
-    image = Image.open('label_encodingt.PNG')
+    image = Image.open('label_encoding.PNG')
     st.image(image, caption='Label Encoding visualization')
     
 #///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
