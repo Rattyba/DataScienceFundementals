@@ -9,24 +9,10 @@ st.title ("Data Science Fundementals Project: Movie Recommendation System")
 df = pd.read_csv("Cleaned_Dataset.csv")
 
 #Select Location
-Select = st.radio("Please select", ("Map", "Question 1", "Question 2", "Question 3"))
+Select = st.radio("Please select", ( "Question 1", "Question 2", "Question 3"))
 
-if Select == "Map":
-    # set header
-    st.header('Location of every customer')
-    st.markdown('Map below is showing the location of every customer based on the coordinate given in the dataset.')
-    people_loc_df = df[["latitude","longitude"]]
-    #print "updating" message
-    my_element = st.info("Updating...")
-    for i in range(1):
-        time.sleep(1)
-    #Remove the message & others element
-    my_element.empty()  
-    #zoom level of the map
-    zoom = 11
-    #set map
-    my_element = st.map(people_loc_df, zoom=zoom)
-elif Select == "Question 1":
+
+if Select == "Question 1":
     # set header
     st.header('Question 1: Which generation of customer spend the most time in the shop?')
     
