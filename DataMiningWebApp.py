@@ -35,9 +35,9 @@ elif Select == "EDA":
     st.header('Exploratory Data Analysis')
     
     st.markdown('For the entire project, I will based on the below question to do clustering on each of the movie. ')
-    image = Image.open('Customer who will bring kids.jpg')
-    st.image(image, caption='Customer who will bring kids')
-    st.markdown('Based on the Group Bar plot, we can find out that majority of the female, especially Malay Female like to bring kids to laundry. The amount of female malay is 457, higher than male malay. Indian female amount is 350, compare with Indian male is higher. However, when comparision between chinese male and female, chinese male amount slighty higher than chinese female. At last, Foreigner female amount is higher than foreigner male.')
+    image = Image.open('table.PNG')
+    st.image(image, caption='The total score at each range of year of movies')
+    st.markdown('From the table we can found out that the total score from 1990 until 2000 and 2000 until 2010 is 2000. ')
     
     st.markdown('Next will be plotting a chart which shows the type of kids that a female customer bring to the laundry shop.')
     image = Image.open('Kids type that a female customer will bring.jpg')
