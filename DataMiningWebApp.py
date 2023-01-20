@@ -9,7 +9,7 @@ st.title ("Data Science Fundementals Project: Movie Recommendation System")
 df = pd.read_csv("Cleaned_Dataset.csv")
 
 #Select Location
-Select = st.radio("Please select", ( "Introduction", "Data Preprocessing", "Question 3"))
+Select = st.radio("Please select", ( "Introduction", "Data Preprocessing", "EDA"))
 
 
 if Select == "Introduction":
@@ -30,13 +30,11 @@ elif Select == "Data Preprocessing":
     st.image(image, caption='Data Preprocessing')
     
     
-elif Select == "Question 3":
+elif Select == "EDA":
     # set header
-    st.header('Question 3: What types of customer will bring kids?')
+    st.header('Exploratory Data Analysis')
     
-    # set subheader
-    st.subheader('Exploratory Data Analysis')
-    st.markdown('First, we plot a bar chart to show the amount of customer who bring kids based on their races and gender.')
+    st.markdown('For the entire project, I will based on the below question to do clustering on each of the movie. ')
     image = Image.open('Customer who will bring kids.jpg')
     st.image(image, caption='Customer who will bring kids')
     st.markdown('Based on the Group Bar plot, we can find out that majority of the female, especially Malay Female like to bring kids to laundry. The amount of female malay is 457, higher than male malay. Indian female amount is 350, compare with Indian male is higher. However, when comparision between chinese male and female, chinese male amount slighty higher than chinese female. At last, Foreigner female amount is higher than foreigner male.')
