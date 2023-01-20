@@ -9,7 +9,7 @@ st.title ("Data Science Fundementals Project: Movie Recommendation System")
 df = pd.read_csv("Cleaned_Dataset.csv")
 
 #Select Location
-Select = st.radio("Please select", ( "Introduction", "Data Preprocessing", "EDA","Label Encoding"))
+Select = st.radio("Please select", ( "Introduction", "Data Preprocessing", "EDA","Label Encoding","Feature Selection"))
 
 
 if Select == "Introduction":
@@ -47,6 +47,13 @@ elif Select == "EDA":
 elif Select == "Label Encoding":
     st.header('Label Encoding')
     st.markdown('Before do feature selection, I used label encoding to encode the dataset. The reason that I used Label Encoding instead od using one-hot encoding is because one-hot encoding easily cause the model overfitting. And feature selection model only can read numerical value.  The following is the output of top five rows after done on label encoding. ')
+    image = Image.open('label_encoding.PNG')
+    st.image(image, caption='Label Encoding visualization')
+
+elif Select == "Feature Selection":
+    st.header('Feature Selection')
+    st.subheader('What are the suitable feature selections techniques to used?')
+    st.markdown('The purpose of feature selection is to select the important variable that is related to our topic. The reason is because unrelated features will cause the model accuracy become worst, and the performance of model be reduce. So, it is important to apply feature selection in this project. Hence, I will use Boruta as the model for feature selection. Because Boruta can combine genuine features with (shadow) features that have been randomly shuffled in order to determine whether real features have a higher score than random features. The following diagram show the output of the score for each feature. ')
     image = Image.open('label_encoding.PNG')
     st.image(image, caption='Label Encoding visualization')
     
