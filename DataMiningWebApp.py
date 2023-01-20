@@ -26,38 +26,9 @@ elif Select == "Data Preprocessing":
     
    
     st.markdown('The dataset which I used for this project was get from Kaggle. The data name is movie.csv. There are 15 columns at this dataset. Which are name (String), rating (String), genre (String), year (Integer), released (String), score (float), votes (float), director (String), writer (String), star (String), country (String), budget (float), gross (float), company (String), runtime (float). But not every column will be used. I drop some unrelated columns, which are name, budget, gross, runtime, writer, star, country, company, director, rating.  After checking the whole dataset, there are some null data. So, for numerical data, I  used 0 to replace the empty value, and for categorical data, I used the word unknown to replace the empty data. ')
-    image = Image.open('Sales vs Date (No Rain).jpg')
-    st.image(image, caption='Sales vs Date (No Rain)')
+    image = Image.open('data_preprocessing.PNG')
+    st.image(image, caption='Data Preprocessing')
     
-    st.markdown('The next plot will be showing the sales during rainny day.')
-    image = Image.open('Sales vs Date (Rain).jpg')
-    st.image(image, caption='Sales vs Date (Rain)')
-    
-    st.markdown('In order to observe the differences of the plots easilly, we combine both plot into one.')
-    image = Image.open('Sales vs Date (Combine).jpg')
-    st.image(image, caption='Sales vs Date (Rain)')
-    st.markdown('From the graph above, we can see that there is a slight difference on the sales based on the weather, did it rain.')
-    st.markdown('There is a slightly higher sales revenue when there is rain.')
-    
-    # set subheader
-    st.subheader('Regression Model - Linear Regression')
-    st.markdown('First, we construct a Linear Regression model using statemodels and the plot below is the result of it.')
-    image = Image.open('Result regression model (statemodels).jpg')
-    st.image(image, caption='Linear Regression model (statemodels)')
-    
-    st.markdown('Beside using statemodels, we also construct the Linear Regression model using sklearn.')
-    image = Image.open('Result regression model (sklearn) 1.jpg')
-    st.image(image, caption='Linear Regression model (sklearn)')
-    image = Image.open('Result regression model (sklearn) 2.jpg')
-    st.image(image, caption='Linear Regression model (sklearn)')
-    
-    # set subheader
-    st.subheader('Regression Model - Decision Tree')
-    image = Image.open('Decision Tree Regressor Result.jpg')
-    st.image(image, caption='Decision Tree Regressor')
-    st.markdown('Mean absolute error = 213.58')
-    st.markdown('MSE :  80110.303842')
-    st.markdown('RMSE :  283.037637')
     
 elif Select == "Question 3":
     # set header
